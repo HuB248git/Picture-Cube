@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Picture Cube project</title>
+        <style>
+            html{
+                height: 100%;
+            }
+          
+            body{
+                background-image: linear-gradient(45deg,rgb(236, 168, 42), pink, lightblue);
+            }
+            #div1{
+                margin: 200px;
+                perspective: 800px;
+            }
+            #img{
+                transform-style: preserve-3d;
+                width: 300px;
+                height: 300px;
+                margin: auto;
+                animation: cube 15s infinite linear;
+                position: relative;
+            }
+            @keyframes cube{
+                from{
+                    transform: rotateX(0deg) rotateY(0deg);
+                }
+                to{
+                    transform: rotateX(360deg) rotateY(360deg);
+                }
+            }
+            #img img{
+                position: absolute;
+                opacity: 0.95;
+                width: 300px;
+                height: 300px;
+                border: 2px solid sandybrown;
+                border-radius: 20px;
+            }
+            img:nth-child(1){
+                transform: rotateY(0deg) translateZ(150px);
+            }
+            img:nth-child(2){
+                transform: rotateY(90deg) translateZ(150px);
+            }
+            img:nth-child(3){
+                transform: rotateY(180deg) translateZ(150px);
+            }
+            img:nth-child(4){
+                transform: rotateY(-90deg) translateZ(150px);
+            }
+            img:nth-child(5){
+                transform: rotateX(90deg)  translateZ(150px);
+            }
+            img:nth-child(6){
+                transform: rotateX(-90deg) translateZ(150px);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <div id="img">
+            <img src="https://image.ibb.co/kJ1b6m/hogwarts_show_orlando_gryffindor_universal_blog.jpg">
+            <img src="https://images.ctfassets.net/usf1vwtuqyxm/4Avjk3GNnKIjYDE9x722Ef/c4fc86d6839be5018c6de266c0dd5148/hp-f6-trio-hogsmeade-snow-hero.jpg">
+            <img src="https://images.ctfassets.net/usf1vwtuqyxm/4Avjk3GNnKIjYDE9x722Ef/c4fc86d6839be5018c6de266c0dd5148/hp-f6-trio-hogsmeade-snow-hero.jpg">
+            <img src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/20/1495208511-hogwarts-express-steam-train.jpg">
+            <img src="https://api.time.com/wp-content/uploads/2014/12/christmas-movies-07.jpg">
+            <img src="https://images.unsplash.com/photo-1452826942781-56e3f80f6a35?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGlhZ29uJTIwYWxsZXl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80">
+        </div>
+    </body>
+</html>
